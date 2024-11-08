@@ -92,7 +92,7 @@ async def recheck(bot, update):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I>♻️🍿 {name}</I></b>\n\n🔗 {msg.link}</I></b>\n\n" disable_web_page_preview=True
+               results += f"<b><I>♻️🍿 {name}</I></b>\n\n🔗 {msg.link}</I></b>\n\n" (disable_web_page_preview=True)
        if bool(results)==False:          
           return await update.message.edit("🔺 Still no results found! Please Request To Group Admin 🔻", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎯 Request To Admin 🎯", callback_data=f"request_{id}")]]))
        await send_message_in_chunks(bot, update.message.chat.id, head+results)
