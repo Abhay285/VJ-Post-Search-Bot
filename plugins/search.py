@@ -115,6 +115,6 @@ async def request(bot, update):
     name  = await search_imdb(id)
     url   = "https://www.imdb.com/title/tt"+id
     text  = f"#RequestFromYourGroup\n\nName: {name}\nIMDb: {url}"
-    await bot.send_message(chat_id=admin, text=text, disable_web_page_preview=False)
+    await bot.send_message(chat_id=admin, text=text, disable_web_page_preview=True)
     await update.answer("✅ Request Sent To Admin", show_alert=True)
     await update.message.delete(60)
