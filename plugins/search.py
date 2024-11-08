@@ -39,10 +39,8 @@ async def search(bot, message):
     if bool(channels)==False:
        return     
     if message.text.startswith("/"):
-       return   
-    id      = update.data.split("_")[-1]
-    query   = message.text 
-    channels = (await get_group(message.chat.id))["channels"]
+       return 
+    query   = message.text
     head    = f"<u>⭕ Here is the results {message.from_user.mention} 👇\n\n💢 Powered By </u> <b><I>@RMCBACKUP❗</I></b>\n\n"
     results = ""
     try:
